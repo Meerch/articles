@@ -13,7 +13,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
     }
 
     config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
-        if ((rule.test as string).includes('svg')) {
+        // eslint-disable-next-line @typescript-eslint/prefer-includes
+        if (/svg/.test(rule.test as string)) {
             return {
                 ...rule,
                 exclude: /\.svg/i
