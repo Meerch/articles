@@ -36,7 +36,8 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     rules: {
         '@typescript-eslint/strict-boolean-expressions': 'off',
@@ -51,7 +52,9 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'no-underscore-dangle': 'off',
         '@typescript-eslint/naming-convention': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }]
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
     },
     globals: {
         __IS_DEV__: true

@@ -39,6 +39,7 @@
 
 .link {
     margin-left: 10px;
+    transition: 0.2s linear;
 }
 
 .icon {
@@ -59,7 +60,6 @@
 
     .link {
         opacity: 0;
-        transition: 0.2s linear;
         width: 0;
     }
 }
