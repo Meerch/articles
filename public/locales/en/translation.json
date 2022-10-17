@@ -8,5 +8,8 @@
   "Информация": "Info",
   "toggle": "toggle",
   "Короткий язык": "en",
-  "Войти": "Login"
+  "Войти": "Login",
+  "value": "value",
+  "increment": "increment",
+  "decrement": "decrement"
 }

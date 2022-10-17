@@ -26,5 +26,8 @@ export default {
         'tsx',
         'json',
         'node'
-    ]
+    ],
+    globals: {
+        __IS_DEV__: true
+    }
 }
