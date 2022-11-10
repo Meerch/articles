@@ -38,4 +38,3 @@ jobs:
       - name: screenshot testing
         if: always()
         run: npm run test:ui:ci
-Страница профиля: Страница профиля
