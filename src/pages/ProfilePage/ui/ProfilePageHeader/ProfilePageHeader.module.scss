@@ -1,0 +1,14 @@
+.ProfilePageHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.editBtn,
+.cancelEdit {
+    margin-left: auto;
+}
+
+.cancelEdit {
+    margin-right: 10px;
+}
