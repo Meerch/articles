@@ -12,7 +12,8 @@ const data: Profile = {
     avatar: 'avatar',
     currency: Currency.RUB,
     country: Country.Russia,
-    city: 'Moscow'
+    city: 'Moscow',
+    id: '1'
 }
 
 describe('updateProfileData.test', () => {

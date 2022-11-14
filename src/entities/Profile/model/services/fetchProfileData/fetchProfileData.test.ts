@@ -5,6 +5,7 @@ import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 
 const data: Profile = {
+    id: '1',
     username: 'nickname',
     first: 'firstName',
     lastname: 'lastName',
@@ -19,7 +20,7 @@ describe('fetchProfileData.test', () => {
     test('', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData)
         thunk.api.get.mockReturnValue(Promise.resolve({ data }))
-        const result = await thunk.callThunk()
+        const result = await thunk.callThunk('1')
 
         expect(thunk.api.get).toHaveBeenCalled()
         expect(thunk.dispatch).toHaveBeenCalledTimes(2)
@@ -30,7 +31,7 @@ describe('fetchProfileData.test', () => {
     test('with server error', async () => {
         const thunk = new TestAsyncThunk(fetchProfileData)
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }))
-        const result = await thunk.callThunk()
+        const result = await thunk.callThunk('1')
 
         expect(thunk.dispatch).toHaveBeenCalledTimes(2)
         expect(thunk.api.get).toHaveBeenCalled()

@@ -18,6 +18,8 @@ import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
+import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 
 const reducers: ReducersList = {
     profile: profileReducer
@@ -31,6 +33,7 @@ const ProfilePage = () => {
     const error = useSelector(getProfileError)
     const form = useSelector(getProfileForm)
     const validateErrors = useSelector(getProfileValidateErrors)
+    const { id } = useParams<{ id: string }>()
 
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректная страна'),
@@ -40,11 +43,11 @@ const ProfilePage = () => {
         [ValidateProfileError.NO_DATA]: t('Данные не указаны')
     }
 
-    useEffect(() => {
-        if (__PROJECT__ === 'frontend') {
-            void dispatch(fetchProfileData())
+    useInitialEffect(() => {
+        if (id) {
+            void dispatch(fetchProfileData(id))
         }
-    }, [dispatch])
+    })
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value ?? '' }))
