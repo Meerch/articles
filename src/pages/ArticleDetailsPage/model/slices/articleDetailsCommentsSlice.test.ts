@@ -24,7 +24,7 @@ const comment2: Comment = {
     text: 'Comment #2'
 }
 
-describe('test slice articleDetailsCommentsSlice', () => {
+describe('test slices articleDetailsCommentsSlice', () => {
     test('test set comments by fetch fulfilled', () => {
         const state: DeepPartial<ArticleDetailsCommentsSchema> = {
             ids: [],
