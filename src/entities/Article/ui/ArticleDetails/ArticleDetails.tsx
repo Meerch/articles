@@ -8,13 +8,13 @@ import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading
-} from '../../model/selectors/articleDetails'
+} from '../../model/selectors/articleDetailsSelectors'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article'
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
@@ -23,7 +23,6 @@ import EyeIcon from 'shared/assets/icons/eye.svg'
 import CalendarIcon from 'shared/assets/icons/calendar.svg'
 import { Icon } from 'shared/ui/Icon/Icon'
 import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { AppLink } from 'shared/ui/AppLink'
 
 interface ArticleDetailsProps {
     className?: string
@@ -112,7 +111,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterDestroy>
+        <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.ArticleDetails, {}, [className])}>
                 {content}
             </div>

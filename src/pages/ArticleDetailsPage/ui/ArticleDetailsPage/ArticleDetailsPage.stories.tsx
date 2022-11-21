@@ -1,8 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import ArticleDetailsPage from './ArticleDetailsPage'
-import { Article } from 'entities/Article'
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
+import { Article, ArticleBlockType, ArticleType } from 'entities/Article'
 import { StoreDecorator } from 'shared/config/storybook/decorators/StoreDecorator'
 
 export default {
@@ -95,5 +94,18 @@ Normal.args = {}
 Normal.decorators = [StoreDecorator({
     articleDetails: {
         data: article
+    },
+    articleDetailsComments: {
+        ids: ['1'],
+        entities: {
+            1: {
+                user: {
+                    username: 'Username 1',
+                    id: '1'
+                },
+                text: 'Text 1',
+                id: '1'
+            }
+        }
     }
 })]

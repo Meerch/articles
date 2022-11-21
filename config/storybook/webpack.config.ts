@@ -12,6 +12,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
         entry: path.resolve(__dirname, '..', '..', 'src')
     }
 
+    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
+    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
+    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
+
     const rules = config.module!.rules as RuleSetRule[]
     config.module!.rules = rules.map((rule: RuleSetRule) => {
         // eslint-disable-next-line @typescript-eslint/prefer-includes
@@ -26,7 +30,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.module!.rules.push(buildCssLoader(true))
     config.module!.rules.push(buildSvgLoader())
 
-    config.resolve!.modules!.push(paths.entry)
+    // config.resolve!.modules!.push(paths.entry)
+    config.resolve!.modules = [
+        path.resolve(__dirname, '../../src'),
+        'node_modules'
+    ]
     config.resolve!.extensions!.push('.ts', '.tsx')
     config.plugins!.push(new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
