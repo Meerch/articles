@@ -36,9 +36,12 @@ export enum ArticleType {
     ECONOMICS = 'ECONOMICS',
 }
 
+export enum ArticleView {
+    LIST = 'LIST',
+    TILE = 'TILE'
+}
+
 export interface Article {
-    blocks: ArticleBlock[]
-    type: ArticleType[]
     id: string
     user: User
     title: string
@@ -46,9 +49,6 @@ export interface Article {
     img: string
     views: number
     createdAt: string
-}
-
-export enum ArticleView {
-    LIST = 'LIST',
-    TILE = 'TILE'
+    blocks: ArticleBlock[]
+    type: ArticleType[]
 }

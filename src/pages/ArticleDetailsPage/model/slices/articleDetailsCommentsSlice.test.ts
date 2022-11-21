@@ -4,7 +4,6 @@ import {
     fetchCommentsByArticleId
 } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { Comment } from 'entities/Comment'
-import { User } from 'entities/User'
 
 const comment1: Comment = {
     id: '1',
