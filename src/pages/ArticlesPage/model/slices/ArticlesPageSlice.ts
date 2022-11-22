@@ -22,7 +22,8 @@ export const ArticlesPageSlice = createSlice({
         ids: [],
         entities: {},
         page: 1,
-        hasMore: true
+        hasMore: true,
+        _inited: false
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -48,6 +49,7 @@ export const ArticlesPageSlice = createSlice({
                 state.isLoading = false
                 state.hasMore = action.payload.length > 0
                 articlesAdapter.addMany(state, action.payload)
+                state._inited = true
             })
             .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false

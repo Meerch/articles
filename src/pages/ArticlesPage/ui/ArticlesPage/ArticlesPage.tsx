@@ -12,9 +12,9 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page/Page'
 import { fetchArticlesNextPage } from 'pages/ArticlesPage/model/services/fetchArticlesNextPage/fetchArticlesNextPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 
 interface ArticlesPageProps {
     className?: string
@@ -28,14 +28,12 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const view = useSelector(getArticlesPageView)
     const isLoading = useSelector(getArticlesPageIsLoading)
     const page = useSelector(getArticlesPageNum)
+
     const articles = useSelector(getArticles.selectAll)
     const dispatch = useAppDispatch()
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState())
-        void dispatch(fetchArticlesList({
-            page: 1
-        }))
+        void dispatch(initArticlesPage())
     })
 
     const onLoadNextPart = useCallback(() => {
@@ -47,7 +45,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch])
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterDestroy={false}>
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}

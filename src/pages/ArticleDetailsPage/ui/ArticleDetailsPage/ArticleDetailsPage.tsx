@@ -19,7 +19,7 @@ import { AddCommentForm } from 'features/AddCommentForm'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Button } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page/Page'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -34,6 +34,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { id } = useParams<{ id: string }>()
     const comments = useSelector(getArticleComments.selectAll)
     const isLoading = useSelector(getArticleCommentsIsLoading)
+
     const navigate = useNavigate()
     const dispatch = useAppDispatch()
 
@@ -58,7 +59,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterDestroy>
+        <DynamicModuleLoader reducers={reducers}>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button onClick={onBackToList}>
                     {t('Вернуться назад')}
