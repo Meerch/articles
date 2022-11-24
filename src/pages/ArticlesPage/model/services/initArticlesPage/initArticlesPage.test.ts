@@ -9,7 +9,8 @@ describe('initArticlesPage.test', () => {
             }
         })
 
-        await thunk.callThunk()
+        const searchParams = new URLSearchParams()
+        await thunk.callThunk(searchParams)
         expect(thunk.dispatch).toBeCalledTimes(4)
     })
 
@@ -20,7 +21,8 @@ describe('initArticlesPage.test', () => {
             }
         })
 
-        await thunk.callThunk()
+        const searchParams = new URLSearchParams()
+        await thunk.callThunk(searchParams)
         expect(thunk.dispatch).toBeCalledTimes(2)
     })
 })
