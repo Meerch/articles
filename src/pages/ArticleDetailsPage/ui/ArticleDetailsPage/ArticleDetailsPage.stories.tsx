@@ -95,16 +95,18 @@ Normal.decorators = [StoreDecorator({
     articleDetails: {
         data: article
     },
-    articleDetailsComments: {
-        ids: ['1'],
-        entities: {
-            1: {
-                user: {
-                    username: 'Username 1',
+    articleDetailsPage: {
+        articleDetailsComments: {
+            ids: ['1'],
+            entities: {
+                1: {
+                    user: {
+                        username: 'Username 1',
+                        id: '1'
+                    },
+                    text: 'Text 1',
                     id: '1'
-                },
-                text: 'Text 1',
-                id: '1'
+                }
             }
         }
     }

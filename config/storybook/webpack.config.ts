@@ -9,12 +9,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
         build: '',
         html: '',
         src: '',
-        entry: path.resolve(__dirname, '..', '..', 'src')
+        entry: path.resolve(__dirname, '..', '..', 'src'),
+        locales: '',
+        buildLocales: ''
     }
-
-    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
-    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
-    console.log('AUAUUAUAUAUAUAUAUAUAUAUUAUAUAUUAUAUAUUAUAUUAUAUUA')
 
     const rules = config.module!.rules as RuleSetRule[]
     config.module!.rules = rules.map((rule: RuleSetRule) => {

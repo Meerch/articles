@@ -6,13 +6,14 @@ import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicM
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
 import { addCommentFormReducer } from 'features/AddCommentForm/model/slice/addCommentFormSlice'
 import { articlesPageReducer } from 'pages/ArticlesPage'
+import { ArticleDetailsPageReducer } from 'pages/ArticleDetailsPage'
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsReducer,
+    articleDetailsPage: ArticleDetailsPageReducer,
     articlesPage: articlesPageReducer
 }
 

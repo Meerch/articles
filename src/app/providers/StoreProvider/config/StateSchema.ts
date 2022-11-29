@@ -6,7 +6,7 @@ import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } f
 import { ProfileSchema } from 'entities/Profile'
 import { AxiosInstance } from 'axios'
 import { ArticleDetailsSchema } from 'entities/Article'
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 
@@ -19,7 +19,8 @@ export interface StateSchema {
     loginForm?: LoginSchema
     profile?: ProfileSchema
     articleDetails?: ArticleDetailsSchema
-    articleDetailsComments?: ArticleDetailsCommentsSchema
+    articleDetailsPage?: ArticleDetailsPageSchema
+    // articleDetailsComments?: ArticleDetailsCommentsSchema
     articlesPage?: ArticlesPageSchema
     addCommentForm?: AddCommentFormSchema
 }

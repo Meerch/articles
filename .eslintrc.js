@@ -52,7 +52,8 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
-        'react-hooks'
+        'react-hooks',
+        'fsd-plugin-fsd'
     ],
     rules: {
         '@typescript-eslint/strict-boolean-expressions': 'off',
@@ -76,7 +77,8 @@ module.exports = {
         '@typescript-eslint/prefer-ts-expect-error': 'off',
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
-        'n/no-callback-literal': 'off'
+        'n/no-callback-literal': 'off',
+        'fsd-plugin-fsd/path-checker': 'error'
     },
     globals: {
         __IS_DEV__: true,

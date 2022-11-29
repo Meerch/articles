@@ -7,13 +7,12 @@ import { articlesPageReducer, getArticles } from '../../model/slices/ArticlesPag
 import { useSelector } from 'react-redux'
 import {
     getArticlesPageIsLoading,
-    getArticlesPageNum,
     getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Page } from 'widgets/Page/Page'
-import { fetchArticlesNextPage } from 'pages/ArticlesPage/model/services/fetchArticlesNextPage/fetchArticlesNextPage'
+import { fetchArticlesNextPage } from '../../model/services/fetchArticlesNextPage/fetchArticlesNextPage'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters'
 import { useSearchParams } from 'react-router-dom'

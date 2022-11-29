@@ -10,7 +10,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
     getAddCommentFormText
-} from 'features/AddCommentForm/model/selectors/addCommentFormSelectors'
+} from '../../model/selectors/addCommentFormSelectors'
 
 export interface AddCommentFormProps {
     className?: string

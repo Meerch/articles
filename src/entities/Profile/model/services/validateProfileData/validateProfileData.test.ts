@@ -1,7 +1,7 @@
-import { Profile, ValidateProfileError } from 'entities/Profile'
+import { Profile, ValidateProfileError } from '../../types/profileSchema'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
-import { validateProfileData } from 'entities/Profile/model/services/validateProfileData/validateProfileData'
+import { validateProfileData } from './validateProfileData'
 
 const data: Profile = {
     username: 'nickname',

@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react'
 import cls from './ArticlesPageFilters.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { ArticleSortField, ArticleSortSelector, ArticleType, ArticleView, ArticleViewSelector, ArticleTypeTabs } from 'entities/Article'
-import { articlesPageActions } from 'pages/ArticlesPage'
+import { articlesPageActions } from '../../model/slices/ArticlesPageSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {

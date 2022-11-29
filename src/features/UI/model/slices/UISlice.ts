@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { UISchema } from 'features/UI/model/types/UISchema'
+import { UISchema } from '../types/UISchema'
 
 const initialState: UISchema = {
     scroll: {}
