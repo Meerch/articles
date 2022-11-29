@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux'
 import {
     getAddCommentFormText
 } from '../../model/selectors/addCommentFormSelectors'
+import { HStack } from 'shared/ui/Stack'
 
 export interface AddCommentFormProps {
     className?: string
@@ -37,7 +38,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.addCommentForm, {}, [className])}>
+            <HStack justify='between' max className={classNames(cls.addCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
                     onChange={onCommentTextChange}
@@ -47,7 +48,7 @@ const AddCommentForm = memo(({ className, onSendComment }: AddCommentFormProps) 
                 <Button onClick={handlerSendComment}>
                     {t('Отправить')}
                 </Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     )
 })
