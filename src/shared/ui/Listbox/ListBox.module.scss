@@ -1,0 +1,44 @@
+.Listbox {
+    position: relative;
+}
+
+.trigger {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options {
+    position: absolute;
+    top: 100%;
+    background: var(--listbox-bg);
+    z-index: 100;
+}
+
+.item {
+    cursor: pointer;
+    padding: 10px 20px;
+
+    &.disabled {
+        // background: var(--inverted-primary-color);
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &.active {
+        background: var(--secondory-color);
+        color: var(--inverted-secondory-color);
+    }
+
+    &.selected {
+        background: var(--primary-color);
+        color: var(--inverted-primary-color);
+    }
+}
+
+.optionsTop {
+    bottom: 100%;
+    top: inherit;
+}
