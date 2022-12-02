@@ -13,7 +13,7 @@ export const Avatar = memo((props: AvatarProps) => {
     const {
         className,
         src,
-        alt = 'Image not loaded',
+        alt = '',
         size = 100
     } = props
 

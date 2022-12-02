@@ -6,6 +6,9 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface NavbarProps {
     className?: string
@@ -32,13 +35,21 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
     if (authData) {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t('Выйти')}
-                </Button>
+                <Dropdown
+                    direction='bottom left'
+                    className={cls.dropdown}
+                    items={[
+                        {
+                            content: t('Профиль'),
+                            href: RoutePath.profile + authData.id
+                        },
+                        {
+                            content: t('Выйти'),
+                            onClick: onLogout
+                        }
+                    ]}
+                    trigger={<Avatar size={30} src={authData.avatar}/>}
+                />
             </header>
         )
     }

@@ -12,7 +12,6 @@
 
 .options {
     position: absolute;
-    top: 100%;
     background: var(--listbox-bg);
     z-index: 100;
 }
@@ -38,7 +37,22 @@
     }
 }
 
-.optionsTop {
+.optionsBottomLeft {
+    right: 0;
+    top: 100%;
+}
+
+.optionsBottomRight {
+    left: 0;
+    top: 100%;
+}
+
+.optionsTopLeft {
+    right: 0;
     bottom: 100%;
-    top: inherit;
+}
+
+.optionsTopRight {
+    left: 0;
+    bottom: 100%;
 }
