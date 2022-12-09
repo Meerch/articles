@@ -18,7 +18,8 @@ module.exports = {
                 'plugin:@typescript-eslint/recommended-requiring-type-checking'
             ],
             rules: {
-                '@typescript-eslint/ban-ts-comment': 'off'
+                '@typescript-eslint/ban-ts-comment': 'off',
+                '@typescript-eslint/no-unsafe-assignment': 'off'
             },
             parserOptions: {
                 project: ['./tsconfig.json']
@@ -79,7 +80,8 @@ module.exports = {
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
         'n/no-callback-literal': 'off',
-        'fsd-plugin-fsd/path-checker': 'error'
+        'fsd-plugin-fsd/path-checker': 'error',
+        '@typescript-eslint/no-unsafe-assignment': 'off'
     },
     globals: {
         __IS_DEV__: true,
