@@ -217,14 +217,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://s.starladder.com/uploads/user_logo/e/c/7/e/meta_tag_3bfa713eaaec1cc84a4251545f2aee42.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://phonoteka.org/uploads/posts/2022-09/1663321151_1-phonoteka-org-p-zenitsu-art-krasivo-1.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://phonoteka.org/uploads/posts/2022-09/1663321151_1-phonoteka-org-p-zenitsu-art-krasivo-1.jpg"
     }
   ],

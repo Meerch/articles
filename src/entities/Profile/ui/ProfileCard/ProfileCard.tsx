@@ -86,6 +86,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
                 className={cls.input}
                 value={data?.first}
                 placeholder={t('Имя')}
+                data-testid='ProfileCard.firstname'
             />
             <Input
                 readonly={readonly}
@@ -93,6 +94,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
                 className={cls.input}
                 value={data?.lastname}
                 placeholder={t('Фамилия')}
+                data-testid='ProfileCard.lastname'
             />
             <Input
                 readonly={readonly}

@@ -16,7 +16,7 @@ interface ProfilePageHeaderProps {
     className?: string
 }
 
-export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({ className }) => {
+export const EditableProfileCardHeader: FC<ProfilePageHeaderProps> = ({ className }) => {
     const { t } = useTranslation('profile')
     const dispatch = useAppDispatch()
     const readonly = useSelector(getProfileReadonly)
@@ -46,8 +46,8 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({ className }) => 
                         readonly
                             ? (<Button
                                 onClick={onEdit}
-
                                 theme={ButtonTheme.OUTLINE}
+                                data-testid='EditableProfileCardHeader.EditButton'
                             >
                                 {t('Редактировать')}
                             </Button>)
@@ -56,12 +56,14 @@ export const ProfilePageHeader: FC<ProfilePageHeaderProps> = ({ className }) => 
                                     <Button
                                         onClick={onCancelEdit}
                                         theme={ButtonTheme.OUTLINE_RED}
+                                        data-testid='EditableProfileCardHeader.CancelButton'
                                     >
                                         {t('Отменить')}
                                     </Button>
                                     <Button
                                         onClick={updateProfile}
                                         theme={ButtonTheme.OUTLINE}
+                                        data-testid='EditableProfileCardHeader.SaveButton'
                                     >
                                         {t('Сохранить')}
                                     </Button>

@@ -6,7 +6,7 @@ import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { VStack } from 'shared/ui/Stack'
-import { ProfilePageHeader } from '../ProfilePageHeader/ProfilePageHeader'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileError } from '../../model/types/editableProfileCardSchema'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
@@ -90,10 +90,15 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     return (
         <DynamicModuleLoader reducers={reducers}>
             <VStack gap='16' max className={className}>
-                <ProfilePageHeader />
+                <EditableProfileCardHeader />
                 {
                     validateErrors?.length && validateErrors.map(error => (
-                        <Text key={error} theme={TextTheme.ERROR} text={validateErrorTranslates[error]} />
+                        <Text
+                            key={error}
+                            theme={TextTheme.ERROR}
+                            text={validateErrorTranslates[error]}
+                            data-testid='EditableProfileCard.Error'
+                        />
                     ))
                 }
                 <ProfileCard
