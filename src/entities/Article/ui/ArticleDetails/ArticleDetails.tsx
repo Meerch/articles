@@ -14,7 +14,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import { ArticleBlock } from '../../model/types/article'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
@@ -24,6 +24,7 @@ import CalendarIcon from 'shared/assets/icons/calendar.svg'
 import { Icon } from 'shared/ui/Icon/Icon'
 import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { HStack, VStack } from 'shared/ui/Stack'
+import { ArticleBlockType } from '../../model/consts/articleConsts'
 
 interface ArticleDetailsProps {
     className?: string

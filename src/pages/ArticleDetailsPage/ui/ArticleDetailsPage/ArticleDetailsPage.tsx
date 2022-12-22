@@ -31,14 +31,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         navigate(RoutePath.articles)
     }, [navigate])
 
-    if (!id) {
-        return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Статья не найдена')}
-            </div>
-        )
-    }
-
     return (
         <DynamicModuleLoader reducers={reducers}>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -46,9 +38,9 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     <Button onClick={onBackToList}>
                         {t('Вернуться назад')}
                     </Button>
-                    <ArticleDetails id={id}/>
+                    <ArticleDetails id={id!}/>
                     <ArticleRecommendationsList />
-                    <ArticleDetailsComments id={id}/>
+                    <ArticleDetailsComments id={id!}/>
                 </VStack>
             </Page>
         </DynamicModuleLoader>

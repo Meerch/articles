@@ -2,7 +2,7 @@ import { HTMLAttributeAnchorTarget, memo } from 'react'
 import cls from './ArticlesListItem.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Article, ArticleBlock, ArticleBlockType, ArticleTextBlock, ArticleView } from '../../model/types/article'
+import { Article, ArticleBlock, ArticleTextBlock } from '../../model/types/article'
 import { Text } from 'shared/ui/Text/Text'
 import { Icon } from 'shared/ui/Icon/Icon'
 import EyeIcon from 'shared/assets/icons/eye.svg'
@@ -12,6 +12,7 @@ import { Button } from 'shared/ui/Button/Button'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import AppLink from 'shared/ui/AppLink/AppLink'
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts'
 
 interface ArticlesListItemProps {
     className?: string

@@ -17,20 +17,23 @@ export default {
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...Object.assign({}, args)} />
 
+const profileData = {
+    username: 'nickname',
+    first: 'firstName',
+    lastname: 'lastName',
+    age: 18,
+    avatar: 'https://m.diskomir.ru/upload/iblock/ac0/ac0e42b7323cbd368e394d34945dfd27.jpg',
+    currency: Currency.RUB,
+    country: Country.Russia,
+    city: 'Moscow'
+}
+
 export const Normal = Template.bind({})
 Normal.args = {}
 Normal.decorators = [StoreDecorator({
     profile: {
-        form: {
-            username: 'nickname',
-            first: 'firstName',
-            lastname: 'lastName',
-            age: 18,
-            avatar: 'https://m.diskomir.ru/upload/iblock/ac0/ac0e42b7323cbd368e394d34945dfd27.jpg',
-            currency: Currency.RUB,
-            country: Country.Russia,
-            city: 'Moscow'
-        }
+        form: profileData,
+        data: profileData
     }
 })]
 

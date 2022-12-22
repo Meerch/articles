@@ -1,4 +1,4 @@
-import { FC, MutableRefObject, UIEvent, useEffect, useRef } from 'react'
+import { MutableRefObject, ReactNode, UIEvent, useRef } from 'react'
 import cls from './Page.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useInfiniteScroll } from 'shared/lib/hooks/useInfiniteScroll/useInfiniteScroll'
@@ -13,9 +13,10 @@ import useInitialEffect from 'shared/lib/hooks/useInitialEffect/useInitialEffect
 interface PageProps {
     className?: string
     onScrollEnd?: () => void
+    children: ReactNode
 }
 
-export const Page: FC<PageProps> = (props) => {
+export const Page = (props: PageProps) => {
     const { className, children, onScrollEnd } = props
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>

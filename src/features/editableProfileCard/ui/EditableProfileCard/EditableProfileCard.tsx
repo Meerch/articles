@@ -8,7 +8,6 @@ import { Country } from 'entities/Country'
 import { VStack } from 'shared/ui/Stack'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema'
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
@@ -20,6 +19,7 @@ import { fetchProfileData } from '../../model/services/fetchProfileData/fetchPro
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
 import { ProfileCard } from 'entities/Profile'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { ValidateProfileError } from '../../model/consts/validateErrorConsts'
 
 interface EditableProfileCardProps {
     className?: string

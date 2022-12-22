@@ -1,9 +1,10 @@
-import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema'
+import { ProfileSchema } from '../types/editableProfileCardSchema'
 import { profileActions, profileReducer } from './profileSlice'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { Profile } from 'entities/Profile'
+import { ValidateProfileError } from '../consts/validateErrorConsts'
 
 const data: Profile = {
     username: 'nickname',

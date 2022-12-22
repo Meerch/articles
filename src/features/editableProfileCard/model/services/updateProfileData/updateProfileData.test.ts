@@ -1,9 +1,9 @@
 import { updateProfileData } from './updateProfileData'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { ValidateProfileError } from '../../types/editableProfileCardSchema'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { Profile } from 'entities/Profile'
+import { ValidateProfileError } from '../../consts/validateErrorConsts'
 
 const data: Profile = {
     username: 'nickname',
