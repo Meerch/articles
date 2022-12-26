@@ -1,0 +1,47 @@
+.popup {
+    position: relative;
+}
+
+.trigger {
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.active {
+    background: var(--secondory-color);
+    color: var(--inverted-secondory-color);
+}
+
+.selected {
+    background: var(--primary-color);
+    color: var(--inverted-primary-color);
+}
+
+.optionsBottomLeft {
+    right: 0;
+    top: 100%;
+}
+
+.optionsBottomRight {
+    left: 0;
+    top: 100%;
+}
+
+.optionsTopLeft {
+    right: 0;
+    bottom: 100%;
+}
+
+.optionsTopRight {
+    left: 0;
+    bottom: 100%;
+}

@@ -5,15 +5,14 @@
     display: flex;
     align-items: center;
     padding: 20px;
+    justify-content: flex-end;
 }
 
 .links,
-.dropdown {
+.dropdown,
+.notification {
     display: flex;
     align-items: center;
-    margin-left: auto;
-
-    // margin-right: 20px;
 }
 
 .mainLink {

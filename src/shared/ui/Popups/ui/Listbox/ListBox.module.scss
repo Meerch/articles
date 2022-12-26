@@ -1,0 +1,10 @@
+.options {
+    position: absolute;
+    background: var(--listbox-bg);
+    z-index: 100;
+}
+
+.item {
+    cursor: pointer;
+    padding: 10px 20px;
+}

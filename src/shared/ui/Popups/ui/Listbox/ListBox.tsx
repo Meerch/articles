@@ -2,9 +2,11 @@ import { Fragment, memo, ReactNode } from 'react'
 import { Listbox as HListBox } from '@headlessui/react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ListBox.module.scss'
-import { Button } from '../Button/Button'
-import { HStack } from '../Stack'
+import clsPopup from '../../styles/popup.module.scss'
+import { Button } from '../../../Button/Button'
+import { HStack } from '../../../Stack'
 import { DropdownDirection } from 'shared/types/ui'
+import { mapDirectionClass } from '../../styles/consts'
 
 export interface ListBoxItem {
     value: string
@@ -21,13 +23,6 @@ interface ListboxProps {
     label?: string
     readonly?: boolean
     direction?: DropdownDirection
-}
-
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top left': cls.optionsTopLeft,
-    'top right': cls.optionsTopRight
 }
 
 export const ListBox = memo((props: ListboxProps) => {
@@ -49,12 +44,12 @@ export const ListBox = memo((props: ListboxProps) => {
             {label && <label>{`${label} >`}</label>}
             <HListBox
                 as='div'
-                className={classNames(cls.Listbox, {}, [className])}
+                className={classNames(cls.Listbox, {}, [className, clsPopup.popup])}
                 value={value ?? defaultValue}
                 onChange={onChange}
                 disabled={readonly}
             >
-                <HListBox.Button as='button' disabled={readonly} className={cls.trigger}>
+                <HListBox.Button as='button' disabled={readonly} className={clsPopup.trigger}>
                     <Button disabled={readonly}>
                         {value ?? defaultValue}
                     </Button>
@@ -74,9 +69,9 @@ export const ListBox = memo((props: ListboxProps) => {
                                 ({ active, selected }) => (
                                     <li
                                         className={classNames(cls.item, {
-                                            [cls.disabled]: item.disabled,
-                                            [cls.active]: active,
-                                            [cls.selected]: selected
+                                            [clsPopup.disabled]: item.disabled,
+                                            [clsPopup.active]: active,
+                                            [clsPopup.selected]: selected
                                         }, [])}
                                     >
                                         {item.content}

@@ -74,7 +74,8 @@ module.exports = {
         'n/no-callback-literal': 'off',
         'fsd-plugin-fsd/path-checker': 'error',
         '@typescript-eslint/no-unsafe-assignment': 'off',
-        '@typescript-eslint/prefer-nullish-coalescing': 'off'
+        '@typescript-eslint/prefer-nullish-coalescing': 'off',
+        '@typescript-eslint/return-await': 'off'
     },
     globals: {
         __IS_DEV__: true,

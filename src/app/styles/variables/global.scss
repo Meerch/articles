@@ -27,7 +27,9 @@
     --sidebar-width-collapsed: 80px;
 
     // Indexes
-    --overlay-index: 10;
+    --overlay-index: 15;
+    --modal-z-index: 1000;
+    --collapse-btn-index: 10;
 
     // Colors
     --color-overlay: rgb(0 0 0 / 60%);
