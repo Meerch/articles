@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Icon } from './Icon'
-import HomeIcon from 'shared/assets/icons/home.svg'
+import HomeIcon from '@/shared/assets/icons/home.svg'
 
 export default {
     title: 'shared/Icon',

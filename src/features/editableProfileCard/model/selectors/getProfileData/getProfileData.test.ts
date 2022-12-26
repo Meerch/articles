@@ -1,8 +1,8 @@
-import { StateSchema } from 'app/providers/StoreProvider'
+import { StateSchema } from '@/app/providers/StoreProvider'
 import { getProfileData } from './getProfileData'
-import { Profile } from 'entities/Profile'
-import { Currency } from 'entities/Currency'
-import { Country } from 'entities/Country'
+import { Profile } from '@/entities/Profile'
+import { Currency } from '@/entities/Currency'
+import { Country } from '@/entities/Country'
 
 const data: Profile = {
     username: 'nickname',

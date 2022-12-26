@@ -3,7 +3,7 @@ import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice'
 import {
     fetchCommentsByArticleId
 } from '../../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import { Comment } from 'entities/Comment'
+import { Comment } from '@/entities/Comment'
 
 const comment1: Comment = {
     id: '1',

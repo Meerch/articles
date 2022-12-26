@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ArticlesList } from 'entities/Article'
+import { ArticlesList } from '@/entities/Article'
 import { useSelector } from 'react-redux'
 import {
     getArticlesPageError,
@@ -8,7 +8,7 @@ import {
     getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slices/ArticlesPageSlice'
-import { Text } from 'shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text/Text'
 
 interface ArticleInfiniteListProps {
     className?: string

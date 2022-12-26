@@ -25,6 +25,8 @@
   "include": [
     "./config/jest/setupTests.ts",
     "./config/jest/jestEmptyComponent.tsx",
+    "./scripts/**/*.ts",
+    "./scripts/**/*.tsx",
     "./src/**/*.ts",
     "./**/*.config.ts",
     "./src/**/*.tsx"

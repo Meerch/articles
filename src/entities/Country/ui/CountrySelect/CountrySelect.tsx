@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { ListBox } from 'shared/ui/Popups'
+import { ListBox } from '@/shared/ui/Popups'
 import { Country } from '../../model/consts/countryConsts'
 
 interface CountrySelectProps {

@@ -3,7 +3,7 @@ import {
     getArticleDetailsError,
     getArticleDetailsIsLoading
 } from './articleDetailsSelectors'
-import { StateSchema } from 'app/providers/StoreProvider'
+import { StateSchema } from '@/app/providers/StoreProvider'
 
 describe('articleDetails.test', () => {
     test('should return data', () => {

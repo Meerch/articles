@@ -1,6 +1,6 @@
 import { addCommentForArticle } from './addCommentForArticle'
-import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { StateSchema } from 'app/providers/StoreProvider'
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
+import { StateSchema } from '@/app/providers/StoreProvider'
 
 const data = {
     articleId: '1',
