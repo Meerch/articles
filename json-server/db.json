@@ -300,5 +300,39 @@
       "avatar": "https://phonoteka.org/uploads/posts/2022-09/1663321151_1-phonoteka-org-p-zenitsu-art-krasivo-1.jpg",
       "country": "Belarus"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "rate": 4,
+      "id": "outt4dj"
+    },
+    {
+      "articleId": "4",
+      "userId": "1",
+      "rate": 4,
+      "id": "8FsEvcC"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "rate": 5,
+      "id": "LYzw8p4"
+    }
   ]
 }

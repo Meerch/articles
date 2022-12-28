@@ -3,7 +3,7 @@ import { Notification } from '../model/types/Notification'
 
 const notificationsApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({
-        getArticleRecommendationList: build.query<Notification[], null>({
+        getNotificationsList: build.query<Notification[], null>({
             query: () => ({
                 url: '/notifications'
             })
@@ -11,4 +11,4 @@ const notificationsApi = rtkApi.injectEndpoints({
     })
 })
 
-export const getNotificationList = notificationsApi.useGetArticleRecommendationListQuery
+export const getNotificationList = notificationsApi.useGetNotificationsListQuery

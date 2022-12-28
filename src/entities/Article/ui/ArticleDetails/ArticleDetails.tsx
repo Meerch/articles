@@ -42,7 +42,11 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     const article = useSelector(getArticleDetailsData)
     const dispatch = useAppDispatch()
 
+    console.log('test article', article)
+
     useInitialEffect(() => {
+        console.log('CALL ID', id)
+        console.log('CALL ID', id)
         void dispatch(fetchArticleById(id))
     })
 

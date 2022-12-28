@@ -38,6 +38,8 @@ export const ArticlesList = memo((props: ArticlesListProps) => {
     } = props
     const { t } = useTranslation('articles')
 
+    console.log('articles', articles)
+
     if (!isLoading && articles.length === 0) {
         return (
             <div className={classNames(cls.ArticlesList, {}, [className, cls[view]])}>
