@@ -6,13 +6,13 @@ import { ArticleDetails } from '@/entities/Article'
 import { useNavigate, useParams } from 'react-router-dom'
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { Button } from '@/shared/ui/Button/Button'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Page } from '@/widgets/Page'
 import { ArticleDetailsPageReducer } from '../../model/slices'
 import { VStack } from '@/shared/ui/Stack'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
 import { ArticleRating } from '@/features/articleRating'
+import { RoutePath } from '@/shared/const/router'
 
 interface ArticleDetailsPageProps {
     className?: string

@@ -1,40 +1,14 @@
-import { RouteProps } from 'react-router-dom'
 import { MainPage } from '@/pages/MainPage'
 import { AboutPage } from '@/pages/AboutPage'
-import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/ProfilePage'
 import { ArticlesPage } from '@/pages/ArticlesPage'
 import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage'
-import { UserRole } from '@/entities/User'
 import { AdminPage } from '@/pages/AdminPage'
+import { UserRole } from '@/entities/User'
 import { ForbiddenPage } from '@/pages/ForbiddenPage'
-
-export type AppRouteProps = RouteProps & {
-    authOnly?: boolean
-    roles?: UserRole[]
-}
-
-export enum AppRoutes {
-    MAIN = 'main',
-    ABOUT = 'about',
-    PROFILE = 'profile',
-    ARTICLES = 'articles',
-    ARTICLE_DETAILS = 'article_details',
-    ADMIN = 'admin',
-    FORBIDDEN = 'forbidden',
-    PAGE_NOT_FOUND = 'not_found',
-}
-
-export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: '/',
-    [AppRoutes.ABOUT]: '/about',
-    [AppRoutes.PROFILE]: '/profile/', // + :id
-    [AppRoutes.ARTICLES]: '/articles',
-    [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + :id
-    [AppRoutes.ADMIN]: '/admin',
-    [AppRoutes.FORBIDDEN]: '/forbidden',
-    [AppRoutes.PAGE_NOT_FOUND]: '*'
-}
+import { NotFoundPage } from '@/pages/NotFoundPage'
+import { AppRoutes, RoutePath } from '@/shared/const/router'
+import { AppRouteProps } from '@/shared/types/router'
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.MAIN]: {
@@ -62,13 +36,13 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     },
     [AppRoutes.ADMIN]: {
         path: `${RoutePath.admin}`,
-        element: <AdminPage />,
+        element: <AdminPage/>,
         authOnly: true,
         roles: [UserRole.ADMIN, UserRole.MANAGER]
     },
     [AppRoutes.FORBIDDEN]: {
         path: `${RoutePath.forbidden}`,
-        element: <ForbiddenPage />
+        element: <ForbiddenPage/>
     },
     [AppRoutes.PAGE_NOT_FOUND]: {
         path: RoutePath.not_found,
