@@ -3,7 +3,7 @@ import { memo } from 'react'
 import { getNotificationList } from '../../api/notificationsApi'
 import { VStack } from '@/shared/ui/Stack'
 import { NotificationItem } from '../NotificationItem/NotificationItem'
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface NotificationListProps {
     className?: string

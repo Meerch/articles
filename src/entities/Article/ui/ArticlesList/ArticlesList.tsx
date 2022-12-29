@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { Article } from '../../model/types/article'
 import { ArticlesListItem } from '../ArticlesListItem/ArticlesListItem'
 import { ArticlesListItemSkeleton } from '../ArticlesListItem/ArticlesListItemSkeleton'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 import { useTranslation } from 'react-i18next'
 import { ArticleView } from '../../model/consts/articleConsts'
 

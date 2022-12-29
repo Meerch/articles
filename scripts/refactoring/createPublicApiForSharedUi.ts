@@ -20,10 +20,8 @@ function isAbsolute (value: string) {
 
 componentsDirs?.forEach((directory) => {
     const folderName = directory.getPath()
-    const indexFilePath = `${directory.getPath()}/index.ts`
-    const indexFilename = directory.getSourceFile(indexFilePath)
+    const indexFilename = 'index.ts'
 
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     const isIndexFileExist = directory.getSourceFile(`${folderName}/${indexFilename}`)
 
     if (!isIndexFileExist) {
@@ -43,7 +41,6 @@ componentsDirs?.forEach((directory) => {
         })
         // console.log(content)
         const file = directory.createSourceFile(
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             `${folderName}/${indexFilename}`,
             content,
             { overwrite: true }

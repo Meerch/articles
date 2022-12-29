@@ -10,8 +10,8 @@ import {
     getArticlesPageSort, getArticlesPageType,
     getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
-import { Input } from '@/shared/ui/Input/Input'
-import { Card } from '@/shared/ui/Card/Card'
+import { Input } from '@/shared/ui/Input'
+import { Card } from '@/shared/ui/Card'
 import { useTranslation } from 'react-i18next'
 import { SortOrder } from '@/shared/types'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
