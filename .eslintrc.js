@@ -72,7 +72,8 @@ module.exports = {
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
         'n/no-callback-literal': 'off',
-        'fsd-plugin-fsd/path-checker': 'error',
+        'fsd-plugin-fsd/path-checker': ['error', { alias: '@' }],
+        'fsd-plugin-fsd/public-api-imports-fsd': ['error', { alias: '@' }],
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/return-await': 'off'

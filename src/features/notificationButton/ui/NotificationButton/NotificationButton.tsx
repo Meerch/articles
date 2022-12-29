@@ -8,7 +8,6 @@ import { NotificationList } from '@/entities/Notification'
 import { Popover } from '@/shared/ui/Popups'
 import { detectDevice } from '@/shared/lib/detectDevice/detectDevice'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider'
 
 interface NotificationButtonProps {
     className?: string

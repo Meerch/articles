@@ -8,7 +8,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     const paths: BuildPaths = {
         build: '',
         html: '',
-        src: '',
+        src: path.resolve(__dirname, '..', '..', 'src'),
         entry: path.resolve(__dirname, '..', '..', 'src'),
         locales: '',
         buildLocales: ''
@@ -34,6 +34,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
         'node_modules'
     ]
     config.resolve!.extensions!.push('.ts', '.tsx')
+    config.resolve!.alias = {
+        ...config.resolve!.alias,
+        '@': paths.src
+    }
+
     config.plugins!.push(new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
         __API__: JSON.stringify('https://testapi.ru/'),
