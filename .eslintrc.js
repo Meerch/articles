@@ -73,7 +73,13 @@ module.exports = {
         '@typescript-eslint/no-misused-promises': 'off',
         'n/no-callback-literal': 'off',
         'fsd-plugin-fsd/path-checker': ['error', { alias: '@' }],
-        'fsd-plugin-fsd/public-api-imports-fsd': ['error', { alias: '@' }],
+        'fsd-plugin-fsd/public-api-imports-fsd': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx']
+            }
+        ],
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/return-await': 'off'

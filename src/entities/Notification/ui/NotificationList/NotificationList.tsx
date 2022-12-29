@@ -1,5 +1,4 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
-import cls from './NotificationList.module.scss'
 import { memo } from 'react'
 import { getNotificationList } from '../../api/notificationsApi'
 import { VStack } from '@/shared/ui/Stack'
@@ -19,7 +18,7 @@ export const NotificationList = memo((props: NotificationListProps) => {
     if (isLoading) {
         return (
             <VStack
-                className={classNames(cls.NotificationList, {}, [className])}
+                className={className}
                 gap='16'
                 max
             >
@@ -32,7 +31,7 @@ export const NotificationList = memo((props: NotificationListProps) => {
 
     return (
         <VStack
-            className={classNames(cls.NotificationList, {}, [className])}
+            className={className}
             gap='16'
             max
         >

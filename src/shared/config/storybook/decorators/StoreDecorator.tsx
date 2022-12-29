@@ -1,15 +1,12 @@
 import { Story } from '@storybook/react'
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
-// eslint-disable-next-line fsd-plugin-fsd/public-api-imports-fsd
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice'
+import { loginReducer } from '@/features/AuthByUsername/testing'
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-// eslint-disable-next-line fsd-plugin-fsd/public-api-imports-fsd
-import { articleDetailsReducer } from '@/entities/Article/model/slice/articleDetailsSlice'
-// eslint-disable-next-line fsd-plugin-fsd/public-api-imports-fsd
-import { addCommentFormReducer } from '@/features/AddCommentForm/model/slice/addCommentFormSlice'
+import { articleDetailsReducer } from '@/entities/Article/testing'
+import { addCommentFormReducer } from '@/features/AddCommentForm/testing'
 import { articlesPageReducer } from '@/pages/ArticlesPage'
 import { ArticleDetailsPageReducer } from '@/pages/ArticleDetailsPage'
-import { profileReducer } from '@/features/editableProfileCard'
+import { profileReducer } from '@/features/editableProfileCard/testing'
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
