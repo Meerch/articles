@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { ArticleSortField } from '../../model/consts/articleConsts'
+import { ArticleSortField } from '../../../../entities/Article/model/consts/articleConsts'
 
 import cls from './ArticleSortSelector.module.scss'
 

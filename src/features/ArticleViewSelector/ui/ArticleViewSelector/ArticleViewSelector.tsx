@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { ArticleView } from '../../model/consts/articleConsts'
+import { ArticleView } from '../../../../entities/Article/model/consts/articleConsts'
 
 import cls from './ArticleViewSelector.module.scss'
 

@@ -1,13 +1,10 @@
 import { Story } from '@storybook/react'
-
 import { articleDetailsReducer } from '@/entities/Article/testing'
 import { addCommentFormReducer } from '@/features/AddCommentForm/testing'
 import { loginReducer } from '@/features/AuthByUsername/testing'
 import { profileReducer } from '@/features/editableProfileCard/testing'
-// eslint-disable-next-line fsd-plugin-fsd/layer-imports
-import { ArticleDetailsPageReducer } from '@/pages/ArticleDetailsPage'
-// eslint-disable-next-line fsd-plugin-fsd/layer-imports
-import { articlesPageReducer } from '@/pages/ArticlesPage'
+import { ArticleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing'
+import { articlesPageReducer } from '@/pages/ArticlesPage/testing'
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
 

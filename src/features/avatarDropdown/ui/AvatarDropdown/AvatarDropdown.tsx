@@ -2,9 +2,9 @@ import React, { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { isUserAdmin, isUserManager, getUserAuthData, userActions } from '@/entities/User'
-import { RoutePath } from '@/shared/const/router'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Dropdown } from '@/shared/ui/Popups'
+import { getRouteAdmin, getRouteProfile } from '@/shared/const/router'
 
 interface avatarDropdownProps {
     className?: string
@@ -35,13 +35,13 @@ export const AvatarDropdown = memo(({ className }: avatarDropdownProps) => {
                 ...(isAdminAvailable
                     ? [{
                         content: t('Админка'),
-                        href: RoutePath.admin
+                        href: getRouteAdmin()
                     }]
                     : []
                 ),
                 {
                     content: t('Профиль'),
-                    href: RoutePath.profile + authData.id
+                    href: getRouteProfile(authData.id)
                 },
                 {
                     content: t('Выйти'),

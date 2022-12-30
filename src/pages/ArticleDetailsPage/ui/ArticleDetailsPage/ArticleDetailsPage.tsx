@@ -1,21 +1,18 @@
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router-dom'
-
 import { ArticleDetailsPageReducer } from '../../model/slices'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
-
 import cls from './ArticleDetailsPage.module.scss'
-
 import { ArticleDetails } from '@/entities/Article'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
-import { RoutePath } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { Button } from '@/shared/ui/Button'
 import { VStack } from '@/shared/ui/Stack'
 import { Page } from '@/widgets/Page'
+import { getRouteArticles } from '@/shared/const/router'
 
 interface ArticleDetailsPageProps {
     className?: string
@@ -32,7 +29,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const navigate = useNavigate()
 
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles)
+        navigate(getRouteArticles())
     }, [navigate])
 
     if (!id) {

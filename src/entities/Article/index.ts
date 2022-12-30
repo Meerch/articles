@@ -14,7 +14,4 @@ export {
 } from './model/consts/articleConsts'
 
 export { ArticlesList } from './ui/ArticlesList/ArticlesList'
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector'
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs'
-export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelector'
 export { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from './model/selectors/articleDetailsSelectors'
