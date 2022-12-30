@@ -1,8 +1,6 @@
 import { memo } from 'react'
-
 import { getNotificationList } from '../../api/notificationsApi'
 import { NotificationItem } from '../NotificationItem/NotificationItem'
-
 import { Skeleton } from '@/shared/ui/Skeleton'
 import { VStack } from '@/shared/ui/Stack'
 

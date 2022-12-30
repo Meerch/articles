@@ -1,7 +1,7 @@
 import { Menu } from '@headlessui/react'
 import { Fragment, memo, ReactNode } from 'react'
 
-import AppLink from '../../../AppLink/AppLink'
+import { AppLink } from '../../../AppLink/AppLink'
 import { mapDirectionClass } from '../../styles/consts'
 import clsPopup from '../../styles/popup.module.scss'
 

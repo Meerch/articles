@@ -50,7 +50,7 @@ WithRate.decorators = [StoreDecorator({})]
 WithRate.parameters = {
     mockData: [
         {
-            url: __API__ + 'articles?articleId=1&userId=1',
+            url: __API__ + 'article-ratings?articleId=1&userId=1',
             method: 'GET',
             status: 200,
             response: []

@@ -1,13 +1,10 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react'
+import cls from './ArticlesList.module.scss'
 import { useTranslation } from 'react-i18next'
-
 import { ArticleView } from '../../model/consts/articleConsts'
 import { Article } from '../../model/types/article'
 import { ArticlesListItem } from '../ArticlesListItem/ArticlesListItem'
 import { ArticlesListItemSkeleton } from '../ArticlesListItem/ArticlesListItemSkeleton'
-
-import cls from './ArticlesList.module.scss'
-
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text, TextSize } from '@/shared/ui/Text'
 
@@ -40,8 +37,6 @@ export const ArticlesList = memo((props: ArticlesListProps) => {
         view = ArticleView.TILE
     } = props
     const { t } = useTranslation('articles')
-
-    console.log('articles', articles)
 
     if (!isLoading && articles.length === 0) {
         return (

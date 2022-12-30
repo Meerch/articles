@@ -3,7 +3,7 @@ import { StyleDecorator } from '../../src/shared/config/storybook/decorators/Sty
 import { ThemeDecorator } from '../../src/shared/config/storybook/decorators/ThemeDecorator'
 import { RouterDecorator } from '../../src/shared/config/storybook/decorators/RouterDecorator'
 import { SuspenseDecorator } from '../../src/shared/config/storybook/decorators/SuspenseDecorator'
-import { Theme } from '@'
+import { Theme } from '../../src/shared/const/theme'
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,7 +12,8 @@ export const parameters = {
             color: /(background|color)$/i,
             date: /Date$/
         }
-    }
+    },
+    layout: 'fullscreen'
 }
 
 addDecorator(StyleDecorator)
