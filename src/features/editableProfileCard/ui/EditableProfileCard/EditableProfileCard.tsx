@@ -1,25 +1,30 @@
-import { useTranslation } from 'react-i18next'
 import React, { memo, useCallback } from 'react'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import useInitialEffect from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Currency } from '@/entities/Currency'
-import { Country } from '@/entities/Country'
-import { VStack } from '@/shared/ui/Stack'
-import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
-import { Text, TextTheme } from '@/shared/ui/Text'
-import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
-import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
+
+import { ValidateProfileError } from '../../model/consts/validateErrorConsts'
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
+import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
+import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+
+import useInitialEffect from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { VStack } from '@/shared/ui/Stack'
+
+import { Text, TextTheme } from '@/shared/ui/Text'
+
 import {
     getProfileValidateErrors
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData'
 import { profileActions, profileReducer } from '../../model/slice/profileSlice'
+
 import { ProfileCard } from '@/entities/Profile'
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { ValidateProfileError } from '../../model/consts/validateErrorConsts'
 
 interface EditableProfileCardProps {
     className?: string

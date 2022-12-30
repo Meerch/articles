@@ -1,8 +1,10 @@
-import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
+
 import { Sidebar } from './Sidebar'
-import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
+
 import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator'
+import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Theme } from '@/shared/const/theme'
 
 export default {

@@ -1,7 +1,10 @@
-import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Card } from './Card'
+import React from 'react'
+
 import { Text } from '../Text/Text'
+
+import { Card } from './Card'
+
 import { ThemeDecorator } from '@/shared/config/storybook/decorators/ThemeDecorator'
 import { Theme } from '@/shared/const/theme'
 

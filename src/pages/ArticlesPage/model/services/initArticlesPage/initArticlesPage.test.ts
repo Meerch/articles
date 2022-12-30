@@ -1,5 +1,6 @@
-import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 import { initArticlesPage } from './initArticlesPage'
+
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 describe('initArticlesPage.test', () => {
     test('success', async () => {

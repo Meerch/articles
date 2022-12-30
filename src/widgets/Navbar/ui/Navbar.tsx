@@ -1,14 +1,16 @@
 import React, { FC, useCallback, useState } from 'react'
-import cls from './Navbar.module.scss'
-import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Button, ButtonTheme } from '@/shared/ui/Button'
-import { LoginModal } from '@/features/AuthByUsername'
 import { useSelector } from 'react-redux'
+
+import cls from './Navbar.module.scss'
+
 import { getUserAuthData } from '@/entities/User'
-import { HStack } from '@/shared/ui/Stack'
-import { NotificationButton } from '@/features/notificationButton'
+import { LoginModal } from '@/features/AuthByUsername'
 import { AvatarDropdown } from '@/features/avatarDropdown'
+import { NotificationButton } from '@/features/notificationButton'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { HStack } from '@/shared/ui/Stack'
 
 interface NavbarProps {
     className?: string

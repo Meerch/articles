@@ -41,7 +41,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module'
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'fsd-plugin-fsd'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'fsd-plugin-fsd', 'unused-imports'],
     rules: {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         'react/jsx-indent': [2, 4],
@@ -53,6 +53,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off',
         'eol-last': 0,
+        'unused-imports/no-unused-imports': 'error',
         'no-multiple-empty-lines': ['error', {
             max: 1,
             maxEOF: 0

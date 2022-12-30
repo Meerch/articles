@@ -1,6 +1,8 @@
-import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import React from 'react'
+
 import { CommentList } from './CommentList'
+
 import { StoreDecorator } from '@/shared/config/storybook/decorators/StoreDecorator'
 
 export default {

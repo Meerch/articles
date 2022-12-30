@@ -1,9 +1,11 @@
-import { updateProfileData } from './updateProfileData'
-import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
-import { Currency } from '@/entities/Currency'
-import { Country } from '@/entities/Country'
-import { Profile } from '@/entities/Profile'
 import { ValidateProfileError } from '../../consts/validateErrorConsts'
+
+import { updateProfileData } from './updateProfileData'
+
+import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
+import { Profile } from '@/entities/Profile'
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 const data: Profile = {
     username: 'nickname',

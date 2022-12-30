@@ -1,10 +1,12 @@
-import { ProfileSchema } from '../types/editableProfileCardSchema'
-import { profileActions, profileReducer } from './profileSlice'
-import { Currency } from '@/entities/Currency'
-import { Country } from '@/entities/Country'
-import { updateProfileData } from '../services/updateProfileData/updateProfileData'
-import { Profile } from '@/entities/Profile'
 import { ValidateProfileError } from '../consts/validateErrorConsts'
+import { updateProfileData } from '../services/updateProfileData/updateProfileData'
+import { ProfileSchema } from '../types/editableProfileCardSchema'
+
+import { profileActions, profileReducer } from './profileSlice'
+
+import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
+import { Profile } from '@/entities/Profile'
 
 const data: Profile = {
     username: 'nickname',

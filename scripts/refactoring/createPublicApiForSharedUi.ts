@@ -1,4 +1,5 @@
 import path from 'path'
+
 import { Project } from 'ts-morph'
 
 const PROJECT_LAYERS = ['app', 'entities', 'features', 'shared', 'pages', 'widgets']

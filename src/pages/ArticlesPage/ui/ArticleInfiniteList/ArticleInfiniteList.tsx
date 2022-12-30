@@ -1,13 +1,15 @@
 import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ArticlesList } from '@/entities/Article'
 import { useSelector } from 'react-redux'
+
 import {
     getArticlesPageError,
     getArticlesPageIsLoading,
     getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slices/ArticlesPageSlice'
+
+import { ArticlesList } from '@/entities/Article'
 import { Text } from '@/shared/ui/Text'
 
 interface ArticleInfiniteListProps {
