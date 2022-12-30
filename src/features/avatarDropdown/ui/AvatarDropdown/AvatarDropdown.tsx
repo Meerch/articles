@@ -1,7 +1,6 @@
 import React, { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-
 import { isUserAdmin, isUserManager, getUserAuthData, userActions } from '@/entities/User'
 import { RoutePath } from '@/shared/const/router'
 import { Avatar } from '@/shared/ui/Avatar'
