@@ -38,7 +38,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page data-testid='ArticleDetailsPage' className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <VStack gap='16' max>
                     <Button onClick={onBackToList}>
                         {t('Вернуться назад')}

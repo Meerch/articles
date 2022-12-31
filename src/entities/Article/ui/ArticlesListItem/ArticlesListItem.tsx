@@ -13,6 +13,8 @@ import { Button } from '@/shared/ui/Button'
 import { Card } from '@/shared/ui/Card'
 import { Icon } from '@/shared/ui/Icon'
 import { Text } from '@/shared/ui/Text'
+import { AppImage } from '@/shared/ui/AppImage'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface ArticlesListItemProps {
     className?: string
@@ -48,7 +50,12 @@ export const ArticlesListItem = memo((props: ArticlesListItemProps) => {
                     </div>
                     <Text title={article.title} className={cls.title}/>
                     {types}
-                    <img src={article.img} alt={article.title} className={cls.image}/>
+                    <AppImage
+                        fallback={<Skeleton width='100%' height={250}/>}
+                        src={article.img}
+                        alt={article.title}
+                        className={cls.image}
+                    />
                     {
                         textBlock &&
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock}/>
@@ -80,7 +87,8 @@ export const ArticlesListItem = memo((props: ArticlesListItemProps) => {
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
-                    <img
+                    <AppImage
+                        fallback={<Skeleton width={200} height={200}/>}
                         src={article.img}
                         alt={article.title}
                         className={cls.image}
