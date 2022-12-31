@@ -26,8 +26,7 @@ const articles = {
         createdAt: '26.02.2022',
         user: {
             username: 'Test User',
-            id: '1',
-            avatar: 'https://get.wallhere.com/photo/1920x1200-px-baby-cats-cute-Daisy-kitten-macro-808522.jpg'
+            id: '1'
         },
         type: [
             ArticleType.IT
@@ -54,8 +53,7 @@ const articles = {
         createdAt: '26.02.2022',
         user: {
             username: 'Test User',
-            id: '1',
-            avatar: 'https://get.wallhere.com/photo/1920x1200-px-baby-cats-cute-Daisy-kitten-macro-808522.jpg'
+            id: '1'
         },
         type: [
             ArticleType.IT
@@ -82,8 +80,7 @@ const articles = {
         createdAt: '26.02.2022',
         user: {
             username: 'Test User',
-            id: '1',
-            avatar: 'https://get.wallhere.com/photo/1920x1200-px-baby-cats-cute-Daisy-kitten-macro-808522.jpg'
+            id: '1'
         },
         type: [
             ArticleType.IT
