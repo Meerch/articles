@@ -33,8 +33,13 @@ export const Modal: FC<ModalProps> = (props) => {
         return null
     }
 
+    let portalRoot
+    if (__PROJECT__ === 'storybook') {
+        portalRoot = document.getElementById('root')
+    }
+
     return (
-        <Portal>
+        <Portal element={portalRoot || document.body}>
             <div className={classNames(cls.Modal, mods, [className])}>
                 <Overlay onClick={close}/>
                 <div className={cls.content}>

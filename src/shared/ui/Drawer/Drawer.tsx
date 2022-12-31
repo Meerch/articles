@@ -80,8 +80,13 @@ export const DrawerContent = memo((props: DrawerProps) => {
 
     const display = y.to((py) => (py < height ? 'block' : 'none'))
 
+    let portalRoot
+    if (__PROJECT__ === 'storybook') {
+        portalRoot = document.getElementById('root')
+    }
+
     return (
-        <Portal>
+        <Portal element={portalRoot || document.body}>
             <div className={classNames(cls.Drawer, {}, [className])}>
                 <Overlay onClick={close} />
                 <Spring.a.div
