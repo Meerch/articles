@@ -21,7 +21,7 @@ const articles = {
         id: '1',
         title: 'Javascript news',
         subtitle: 'Что нового в JS за 2022 год?',
-        img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
+        img: '',
         views: 1022,
         createdAt: '26.02.2022',
         user: {
@@ -48,7 +48,7 @@ const articles = {
         id: '2',
         title: 'Python news',
         subtitle: 'Что нового в JS за 2022 год?',
-        img: 'https://podruzke.ru/wp-content/uploads/2021/08/2-5.jpg',
+        img: '',
         views: 1022,
         createdAt: '26.02.2022',
         user: {
@@ -75,7 +75,7 @@ const articles = {
         id: '3',
         title: 'Kotlin news',
         subtitle: 'Что нового в JS за 2022 год?',
-        img: 'https://brainshef.ru/storage/app/uploads/public/61d/bed/9c8/61dbed9c893fc376365014.png',
+        img: '',
         views: 1022,
         createdAt: '26.02.2022',
         user: {
