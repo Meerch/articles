@@ -7,7 +7,7 @@ npm run start:dev или npm run start:dev:vite - starting the server + frontend
 
 ----
 
-## Скрипты
+## Scripts
 
 - `npm run start` - Launching a frontend project on a webpack dev server
 - `npm run start:vite` - Launching a frontend project on vite
@@ -159,32 +159,3 @@ Requests to the server are sent using [RTK query](/src/shared/api/rtkApi.ts)
 
 To asynchronously connect the editors (so as not to pull them into a common bundle), use
 [DynamicModuleLoader](/src/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader.tsx)
-
-----
-
-## Entities
-
-- Article
-- Comment
-- Counter
-- Country
-- Currency
-- Notification
-- Profile
-- Rating
-- User
-
-## Features
-
-- addCommentForm
-- articleEditForm
-- articleRating
-- articleRecommendationsList
-- AuthByUsername
-- avatarDropdown
-- editableProfileCard
-- LangSwitcher
-- notificationButton
-- profileRating
-- ThemeSwitcher
-- UI
