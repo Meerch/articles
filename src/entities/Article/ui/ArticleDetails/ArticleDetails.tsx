@@ -1,7 +1,6 @@
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-
 import { ArticleBlockType } from '../../model/consts/articleConsts'
 import {
     getArticleDetailsData,
@@ -12,26 +11,20 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { ArticleBlock } from '../../model/types/article'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-
 import cls from './ArticleDetails.module.scss'
-
 import EyeIcon from '@/shared/assets/icons/eye.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
-
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Skeleton } from '@/shared/ui/Skeleton'
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text'
-
 import { Avatar } from '@/shared/ui/Avatar'
-
-import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
-import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
-
 import CalendarIcon from '@/shared/assets/icons/calendar.svg'
 import { Icon } from '@/shared/ui/Icon'
 import useInitialEffect from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { HStack, VStack } from '@/shared/ui/Stack'
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 
 interface ArticleDetailsProps {
     className?: string
@@ -49,11 +42,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     const article = useSelector(getArticleDetailsData)
     const dispatch = useAppDispatch()
 
-    console.log('test article', article)
-
     useInitialEffect(() => {
-        console.log('CALL ID', id)
-        console.log('CALL ID', id)
         void dispatch(fetchArticleById(id))
     })
 
@@ -106,7 +95,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                     className={cls.avatar}
                 />
             </HStack>
-            <VStack gap='4' max>
+            <VStack gap='4' max data-testid='ArticleDetails.Info'>
                 <Text
                     title={article?.title}
                     text={article?.subtitle}

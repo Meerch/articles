@@ -1,15 +1,14 @@
 import React, { Suspense, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-
+import { useSelector } from 'react-redux'
 import { AppRouter } from './providers/router'
-
 import { getUserInited, userActions } from '@/entities/User'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Navbar } from '@/widgets/Navbar'
 import { Sidebar } from '@/widgets/Sidebar'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 const App = () => {
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const inited = useSelector(getUserInited)
 
     useEffect(() => {

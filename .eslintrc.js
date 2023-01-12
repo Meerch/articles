@@ -36,6 +36,15 @@ module.exports = {
         rules: {
             '@typescript-eslint/unbound-method': 'off'
         }
+    }, {
+        files: ['cypress/**/*.ts'],
+        rules: {
+            '@typescript-eslint/no-namespace': 'off',
+            '@typescript-eslint/method-signature-style': 'off',
+            '@typescript-eslint/no-unsafe-return': 'off',
+            '@typescript-eslint/no-unsafe-call': 'off',
+            '@typescript-eslint/no-unsafe-member-access': 'off'
+        }
     }],
     parserOptions: {
         ecmaVersion: 'latest',
