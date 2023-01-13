@@ -35,3 +35,5 @@ describe('User visit on page of article', () => {
         cy.get('[data-selected=true]').should('have.length', 5)
     })
 })
+
+export {}

@@ -10,3 +10,5 @@ describe('User visit on page of articles', () => {
         cy.getByTestId('ArticlesListItem').should('have.length.greaterThan', 3)
     })
 })
+
+export {}
